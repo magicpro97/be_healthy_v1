@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40c98b0f-afb0-4b22-8f36-851afb6d13cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseSetLogRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseSetRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,15 +30,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="26" />
-          <entry key="java" value="12007" />
+          <entry key="java" value="12021" />
           <entry key="properties" value="76" />
+          <entry key="txt" value="26" />
           <entry key="xml" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12007" />
-          <entry key="PLAIN_TEXT" value="26" />
+          <entry key="JAVA" value="12021" />
+          <entry key="PLAIN_TEXT" value="52" />
           <entry key="Properties" value="76" />
           <entry key="XML" value="17" />
         </counts>
@@ -105,20 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseRepositoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="45" column="5" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="45" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseSetLogRepositoryTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="691">
-              <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+            <state relative-caret-position="408">
+              <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,10 +111,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseSetLogRepositoryTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="470">
+              <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseSetRepositoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="47" column="5" lean-forward="true" selection-start-line="42" selection-start-column="4" selection-end-line="47" selection-end-column="5" />
+            <state relative-caret-position="391">
+              <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -234,9 +230,9 @@
         <option value="$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseSetController.java" />
         <option value="$PROJECT_DIR$/src/test/resources/application.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseSetRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseSetLogRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseSetRepositoryTest.java" />
       </list>
     </option>
   </component>
@@ -359,7 +355,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533802794729" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533802800205" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -495,17 +491,26 @@
       <workItem from="1533612168722" duration="13966000" />
       <workItem from="1533627547265" duration="2074000" />
       <workItem from="1533733082560" duration="4414000" />
-      <workItem from="1533799600007" duration="2958000" />
+      <workItem from="1533799600007" duration="3215000" />
     </task>
+    <task id="LOCAL-00001" summary="&quot;Update repository test&quot;">
+      <created>1533802765644</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1533802765644</updated>
+    </task>
+    <task id="LOCAL-00002" summary="&quot;Update repository test&quot;">
+      <created>1533802812190</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1533802812190</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ExerciseSetRepositoryTest - 2018.08.09 at 14h 54m 30s.xml">
-      <configuration name="ExerciseSetRepositoryTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExerciseSetRepositoryTest - 2018.08.09 at 14h 58m 03s.xml">
-      <configuration name="ExerciseSetRepositoryTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ExerciseSetRepositoryTest - 2018.08.09 at 15h 00m 47s.xml">
       <configuration name="ExerciseSetRepositoryTest" configurationId="JUnit" />
     </history-entry>
@@ -530,15 +535,20 @@
     <history-entry file="ExerciseRepositoryTest - 2018.08.09 at 15h 11m 14s.xml">
       <configuration name="ExerciseRepositoryTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ExerciseSetLogRepositoryTest - 2018.08.09 at 15h 16m 06s.xml">
+      <configuration name="ExerciseSetLogRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ExerciseSetLogRepositoryTest - 2018.08.09 at 15h 16m 34s.xml">
+      <configuration name="ExerciseSetLogRepositoryTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67546000" />
+    <option name="totallyTimeSpent" value="67803000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1562" height="1087" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49881235" visible="true" weight="0.21171771" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49881235" visible="true" weight="0.21171771" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -550,7 +560,7 @@
       <window_info anchor="bottom" id="Spring" order="0" weight="0.32952183" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.5099685" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.5099685" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -559,7 +569,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5010661" side_tool="true" weight="0.3097713" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32952183" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="12" visible="true" weight="0.32948583" />
       <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49919093" weight="0.32528856" />
       <window_info anchor="right" id="Bean Validation" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
@@ -578,6 +588,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;Update repository test&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Update repository test&quot;" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/dto/BaseDto.java" />
@@ -710,26 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="45" column="5" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="45" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseSetRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="47" column="5" lean-forward="true" selection-start-line="42" selection-start-column="4" selection-end-line="47" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/respotories/ExerciseSetLogRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -740,10 +734,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseSetLogRepositoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+        <state relative-caret-position="470">
+          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseSetRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
