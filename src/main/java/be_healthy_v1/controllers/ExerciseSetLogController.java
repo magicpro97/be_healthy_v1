@@ -11,9 +11,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("/exerciseSetLogs")
@@ -35,6 +37,7 @@ public class ExerciseSetLogController {
 
     @GetMapping
     public ResponseEntity getExerciseSetLogs(@RequestParam(defaultValue = "1") int page, @RequestParam(defaultValue = "10") int size){
+        logger.info("Retrieve all exercise set logs ");
         PageRequest pageRequest = new PageRequest(page -1,size);
         Page<ExerciseSetLogEntity> pageESL = exerciseSetLogRepository.findAll(pageRequest);
         return new ResponseEntity<>(pageESL, HttpStatus.OK);
@@ -45,6 +48,7 @@ public class ExerciseSetLogController {
         logger.info("Retrieve a exercise set log by id {}", id);
         if(exerciseSetLogRepository.existsById(id)){
             ExerciseSetLogEntity exerciseSetLogEntity = exerciseSetLogRepository.getOne(id);
+            logger.info("",exerciseSetLogEntity);
             return new ResponseEntity<>(exerciseSetLogEntity,HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -62,17 +66,20 @@ public class ExerciseSetLogController {
     }
 
     @PostMapping
-    public ResponseEntity addExerciseSetLog(@RequestBody ExerciseSetLogDto exerciseSetLogDto){
+    public ResponseEntity addExerciseSetLog(@RequestBody ExerciseSetLogDto exerciseSetLogDto, UriComponentsBuilder ucBuilder){
+        logger.info("Create a new exercise set log");
         if(exerciseSetLogDto == null){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        ExerciseSetEntity exerciseSetEntity = exerciseSetRepository.getOne(exerciseSetLogDto.getExerciseSet().getId());
-        exerciseSetLogRepository.save(new ExerciseSetLogEntity(exerciseSetLogDto.getDateLog(),exerciseSetLogDto.getRating()));
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        ExerciseSetLogEntity exerciseSetLogEntity = new ExerciseSetLogEntity(exerciseSetLogDto.getDateLog(),exerciseSetLogDto.getRating());
+        exerciseSetLogRepository.save(exerciseSetLogEntity);
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.setLocation(ucBuilder.path("/exerciseSetsLogs/{id}").buildAndExpand(exerciseSetLogEntity.getId()).toUri());
+        return new ResponseEntity<>(httpHeaders,HttpStatus.CREATED);
     }
 
     @PostMapping(value = "/{id}/exerciseSet/{esId}")
-    public ResponseEntity addExericeSetAssociate(@PathVariable("id") Long id, @PathVariable("id") Long esId){
+    public ResponseEntity addExerciceSetAssociate(@PathVariable("id") Long id, @PathVariable("id") Long esId){
         if(id == null || esId == null)
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         if(!exerciseSetLogRepository.existsById(id)){
@@ -83,9 +90,12 @@ public class ExerciseSetLogController {
         }
         ExerciseSetEntity exerciseSetEntity = exerciseSetRepository.getOne(esId);
         ExerciseSetLogEntity exerciseSetLogEntity = exerciseSetLogRepository.getOne(id);
+        if(exerciseSetEntity.getExerciseSetLogs().contains(exerciseSetLogEntity)){
+            return new ResponseEntity<>(exerciseSetLogEntity, HttpStatus.CONFLICT);
+        }
         exerciseSetEntity.getExerciseSetLogs().add(exerciseSetLogEntity);
         exerciseSetRepository.save(exerciseSetEntity);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseEntity<>(exerciseSetEntity,HttpStatus.CREATED);
     }
 
     @DeleteMapping(value = "/{id}")

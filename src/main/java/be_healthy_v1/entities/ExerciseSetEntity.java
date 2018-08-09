@@ -13,7 +13,7 @@ public class ExerciseSetEntity {
     private Long id;
     private String title;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
     @JoinColumn(name = "exercise_set_id")
     private List<ExerciseSetLogEntity> exerciseSetLogs;
 

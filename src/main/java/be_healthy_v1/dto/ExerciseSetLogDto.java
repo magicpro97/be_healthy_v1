@@ -8,6 +8,10 @@ public class ExerciseSetLogDto {
     private int rating;
     private ExerciseSetDto exerciseSet;
 
+    public ExerciseSetLogDto() {
+        super();
+    }
+
     public ExerciseSetLogDto(Date dateLog, int rating) {
         this.dateLog = dateLog;
         this.rating = rating;

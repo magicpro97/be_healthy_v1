@@ -15,12 +15,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 @RequestMapping(path = "/exerciseSets")
@@ -42,6 +42,7 @@ public class ExerciseSetController {
 
     @GetMapping
     public ResponseEntity getExerciseSets(@RequestParam(defaultValue = "1") int page, @RequestParam(defaultValue = "10") int size, @RequestParam(required = false)Sort sort){
+        logger.info("Retrieve all exercise sets ");
         if(sort == null) sort = new Sort(Sort.Direction.ASC,"id");
         PageRequest pageRequest = new PageRequest(page - 1, size,sort);
         Page<ExerciseSetEntity> exerciseSetEntityPage = exerciseSetRepository.findAll(pageRequest);
@@ -58,16 +59,20 @@ public class ExerciseSetController {
     }
 
     @PostMapping
-    public ResponseEntity addExerciseSet(@RequestBody ExerciseSetDto exerciseSetDto){
+    public ResponseEntity addExerciseSet(@RequestBody ExerciseSetDto exerciseSetDto,  UriComponentsBuilder ucBuilder){
         logger.info("Add a new exercise set {}", exerciseSetDto);
         if(exerciseSetDto == null)
             return  new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        exerciseSetRepository.save(new ExerciseSetEntity(exerciseSetDto.getTitle()));
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        ExerciseSetEntity exerciseSetEntity = new ExerciseSetEntity(exerciseSetDto.getTitle());
+        exerciseSetRepository.save(exerciseSetEntity);
+        HttpHeaders headers = new HttpHeaders();
+        headers.setLocation(ucBuilder.path("/exerciseSets/{id}").buildAndExpand(exerciseSetEntity.getId()).toUri());
+        return new ResponseEntity(headers,HttpStatus.CREATED);
     }
 
     @PostMapping(value = "/{id}/exercise/{eId}")
     public ResponseEntity addExerciseAssociate(@PathVariable("id") Long id, @PathVariable("eId") Long eId){
+        logger.info("Add Exercise Associate {} | {}",id,eId);
         if(id == null || eId == null){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
@@ -77,15 +82,19 @@ public class ExerciseSetController {
         if(!exerciseRepository.existsById(eId)){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        ExerciseEntity exerciseEntity = exerciseRepository.getOne(eId);
         ExerciseSetEntity exerciseSetEntity = exerciseSetRepository.getOne(id);
+        ExerciseEntity exerciseEntity = exerciseRepository.getOne(eId);
+        if(exerciseSetEntity.getExercises().contains(exerciseEntity)){
+            return  new ResponseEntity<>(exerciseEntity,HttpStatus.CONFLICT);
+        }
         exerciseSetEntity.getExercises().add(exerciseEntity);
         exerciseSetRepository.save(exerciseSetEntity);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseEntity<>(exerciseSetEntity,HttpStatus.CREATED);
     }
 
     @PostMapping(value = "/{id}/exerciseSetLog/{eslId}")
     public ResponseEntity addExerciseSetLogAssociate(@PathVariable("id") Long id, @PathVariable("eslId") Long eslId){
+        logger.info("Add Exercise Set Log Associate {} | {}",id,eslId);
         if(id == null || eslId == null){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
@@ -97,62 +106,32 @@ public class ExerciseSetController {
         }
         ExerciseSetLogEntity exerciseSetLogEntity = exerciseSetLogRepository.getOne(eslId);
         ExerciseSetEntity exerciseSetEntity = exerciseSetRepository.getOne(id);
+        if(exerciseSetEntity.getExerciseSetLogs().contains(exerciseSetLogEntity)){
+            return  new ResponseEntity<>(exerciseSetLogEntity,HttpStatus.CONFLICT);
+        }
         exerciseSetEntity.getExerciseSetLogs().add(exerciseSetLogEntity);
         exerciseSetRepository.save(exerciseSetEntity);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseEntity<>(exerciseSetEntity,HttpStatus.CREATED);
     }
 
-    @PutMapping
-    public ResponseEntity updateExerciseSet(@RequestBody ExerciseSetDto exerciseSetDto){
-        System.out.println("Putting ES");
+    @PutMapping(value = "/{id}")
+    public ResponseEntity updateExerciseSet(@PathVariable Long id, @RequestBody ExerciseSetDto exerciseSetDto){
+        logger.info("Update Exercise Set by id {}", id);
+        logger.info("{}",exerciseSetDto);
         if(exerciseSetDto == null)
             return  new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        if(!exerciseSetRepository.existsById(exerciseSetDto.getId())) {
+        if(!exerciseSetRepository.existsById(id)) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        ExerciseSetEntity exerciseSetEntity = exerciseSetRepository.getOne(exerciseSetDto.getId());
-        System.out.println(exerciseSetDto.getId());
-        System.out.println(exerciseSetDto.getExercises().isEmpty());
-        if(!exerciseSetDto.getExercises().isEmpty()){
-            for (ExerciseDto exerciseDto : exerciseSetDto.getExercises()
-            ) {
-                for (ExerciseEntity exerciseEntity : exerciseSetEntity.getExercises()
-                     ) {
-                    System.out.println(exerciseSetEntity.getExercises().isEmpty());
-                    System.out.println(!exerciseEntity.getId().equals(exerciseDto.getId()));
-                    if(exerciseSetEntity.getExercises().isEmpty() || !exerciseEntity.getId().equals(exerciseDto.getId())) {
-                        if (exerciseRepository.existsById(exerciseDto.getId())) {
-
-                            exerciseSetEntity.getExercises().add(exerciseRepository.getOne(exerciseDto.getId()));
-                        } else {
-                            return new ResponseEntity<>("A/Some id is not exist.Nothing changed", HttpStatus.BAD_REQUEST);
-                        }
-                    }
-                }
-            }
-        }
-        if(!exerciseSetDto.getExerciseSetLoggings().isEmpty()){
-            for (ExerciseSetLogDto exerciseSetLogDto : exerciseSetDto.getExerciseSetLoggings()
-            ) {
-                for (ExerciseSetLogEntity exerciseSetLogEntity : exerciseSetEntity.getExerciseSetLogs()
-                ) {
-                    if(!exerciseSetLogEntity.getId().equals(exerciseSetLogDto.getId())) {
-                        if (exerciseSetLogRepository.existsById(exerciseSetLogDto.getId())) {
-                            exerciseSetEntity.getExerciseSetLogs().add(exerciseSetLogRepository.getOne(exerciseSetLogDto.getId()));
-                        } else {
-                            return new ResponseEntity<>("A/Some id is not exist.Nothing changed", HttpStatus.BAD_REQUEST);
-                        }
-                    }
-                }
-            }
-        }
+        ExerciseSetEntity exerciseSetEntity = exerciseSetRepository.getOne(id);
         exerciseSetEntity.setTitle(exerciseSetDto.getTitle() == null ? exerciseSetEntity.getTitle() : exerciseSetDto.getTitle());
         exerciseSetRepository.save(exerciseSetEntity);
-        return new ResponseEntity(HttpStatus.OK);
+        return new ResponseEntity(exerciseSetEntity,HttpStatus.OK);
     }
 
-    @DeleteMapping
-    public ResponseEntity deleteExerciseSet(@RequestParam Long id){
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity deleteExerciseSet(@PathVariable("id") Long id){
+        logger.info("Delete Exercise Set by id {}", id);
         if(!exerciseSetRepository.existsById(id))
             return new ResponseEntity<>("A/Some id is not exist.Nothing changed", HttpStatus.BAD_REQUEST);
         ExerciseSetEntity exerciseSetEntity = exerciseSetRepository.getOne(id);

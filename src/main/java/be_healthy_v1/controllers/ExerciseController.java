@@ -41,6 +41,7 @@ public class ExerciseController {
 
     @GetMapping
     public ResponseEntity getExercises(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize){
+        logger.info("Retrieve all exercises");
         PageRequest pageRequest = new PageRequest(pageNum - 1, pageSize);
         Page<ExerciseEntity> page = exerciseRepository.findAll(pageRequest);
         return new ResponseEntity<>(page, HttpStatus.OK);
@@ -59,11 +60,13 @@ public class ExerciseController {
     @PostMapping
     public ResponseEntity addExercise(@RequestBody ExerciseDto exerciseDto, UriComponentsBuilder ucBuilder){
         logger.info("Creating exercise : {}", exerciseDto);
+        ExerciseEntity exerciseEntity = null;
         if(exerciseDto == null) {
             return new ResponseEntity<>("Null request", HttpStatus.BAD_REQUEST);
         }
         if(exerciseDto.getExerciseSets() == null || exerciseDto.getExerciseSets().isEmpty()) {
-            exerciseRepository.save(new ExerciseEntity(exerciseDto.getTitle(),exerciseDto.getDescription()));
+            exerciseEntity = new ExerciseEntity(exerciseDto.getTitle(),exerciseDto.getDescription());
+            exerciseRepository.save(exerciseEntity);
         }else {
             List<ExerciseSetEntity> exerciseSetEntities = new ArrayList<>();
             boolean err = false;
@@ -81,10 +84,11 @@ public class ExerciseController {
                 return new ResponseEntity<>( errDetail+ "ís not found. Nothing added.",
                         HttpStatus.NOT_FOUND);
             }
-            exerciseRepository.save(new ExerciseEntity(exerciseDto.getTitle(), exerciseDto.getDescription(), exerciseSetEntities));
+            exerciseEntity = new ExerciseEntity(exerciseDto.getTitle(), exerciseDto.getDescription(), exerciseSetEntities);
+            exerciseRepository.save(exerciseEntity);
         }
         HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(ucBuilder.path("/exercises/{id}").buildAndExpand(exerciseDto.getId()).toUri());
+        headers.setLocation(ucBuilder.path("/exercises/{id}").buildAndExpand(exerciseEntity.getId()).toUri());
         return new ResponseEntity(headers,HttpStatus.CREATED);
     }
 
@@ -122,7 +126,7 @@ public class ExerciseController {
         ExerciseEntity exerciseEntity = exerciseRepository.getOne(id);
         ExerciseSetEntity exerciseSetEntity = exerciseSetRepository.getOne(esId);
         if(exerciseEntity.getExerciseSets().contains(exerciseEntity)){
-            return new ResponseEntity<>("Duplicate exercise set", HttpStatus.CONFLICT);
+            return new ResponseEntity<>(exerciseEntity, HttpStatus.CONFLICT);
         }
         else{
             exerciseSetEntity.getExercises().add(exerciseEntity);

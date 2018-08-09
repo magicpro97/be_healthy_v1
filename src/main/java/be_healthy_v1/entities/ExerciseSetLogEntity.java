@@ -1,6 +1,7 @@
 package be_healthy_v1.entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -11,11 +12,13 @@ public class ExerciseSetLogEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    private ExerciseSetEntity exerciseSet;
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date dateLog;
     private int rating;
+
+    @ManyToOne
+    @JsonIgnore
+    private ExerciseSetEntity exerciseSet;
 
     public ExerciseSetLogEntity() {
         super();
@@ -26,7 +29,7 @@ public class ExerciseSetLogEntity {
         this.rating = rating;
     }
 
-    public ExerciseSetLogEntity(ExerciseSetEntity exerciseSet, Date dateLog, int rating) {
+    public ExerciseSetLogEntity(Date dateLog, int rating, ExerciseSetEntity exerciseSet) {
         addExerciseSet(exerciseSet);
         this.dateLog = dateLog;
         this.rating = rating;
