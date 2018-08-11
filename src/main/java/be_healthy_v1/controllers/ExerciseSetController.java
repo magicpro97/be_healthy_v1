@@ -135,7 +135,7 @@ public class ExerciseSetController {
     public ResponseEntity deleteExerciseSet(@PathVariable("id") Long id){
         logger.info("Delete Exercise Set by id {}", id);
         if(!exerciseSetRepository.existsById(id))
-            return new ResponseEntity<>("A/Some id is not exist.Nothing changed", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("A/Some id is not exist.Nothing changed", HttpStatus.NOT_FOUND);
         ExerciseSetEntity exerciseSetEntity = exerciseSetRepository.getOne(id);
         exerciseSetEntity.removeAllExercises();
         exerciseSetEntity.removeAllExericseSetLogs();
