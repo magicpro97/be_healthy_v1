@@ -14,6 +14,12 @@ public class ExerciseSetDto {
         exerciseSetLoggings = new ArrayList<>();
     }
 
+    public ExerciseSetDto(String title) {
+        this.title = title;
+        exercises = new ArrayList<>();
+        exerciseSetLoggings = new ArrayList<>();
+    }
+
     public ExerciseSetDto(Long id, String title) {
         this.id = id;
         this.title = title;

@@ -79,7 +79,7 @@ public class ExerciseSetLogController {
     }
 
     @PostMapping(value = "/{id}/exerciseSet/{esId}")
-    public ResponseEntity addExerciceSetAssociate(@PathVariable("id") Long id, @PathVariable("id") Long esId){
+    public ResponseEntity addExerciceSetAssociate(@PathVariable("id") Long id, @PathVariable("esId") Long esId){
         if(id == null || esId == null)
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         if(!exerciseSetLogRepository.existsById(id)){
@@ -90,8 +90,12 @@ public class ExerciseSetLogController {
         }
         ExerciseSetEntity exerciseSetEntity = exerciseSetRepository.getOne(esId);
         ExerciseSetLogEntity exerciseSetLogEntity = exerciseSetLogRepository.getOne(id);
-        if(exerciseSetEntity.getExerciseSetLogs().contains(exerciseSetLogEntity)){
-            return new ResponseEntity<>(exerciseSetLogEntity, HttpStatus.CONFLICT);
+        for (ExerciseSetLogEntity setEntity:exerciseSetEntity.getExerciseSetLogs()
+             ) {
+            if (setEntity.getId().equals(id)) {
+                return new ResponseEntity<>(exerciseSetLogEntity, HttpStatus.CONFLICT);
+
+            }
         }
         exerciseSetEntity.getExerciseSetLogs().add(exerciseSetLogEntity);
         exerciseSetRepository.save(exerciseSetEntity);
