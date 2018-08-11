@@ -30,6 +30,7 @@ public class ExerciseEntity {
     public ExerciseEntity(String title, String description) {
         this.title = title;
         this.description = description;
+        exerciseSets = new ArrayList<>();
     }
 
     public Long getId() {

@@ -84,8 +84,10 @@ public class ExerciseSetController {
         }
         ExerciseSetEntity exerciseSetEntity = exerciseSetRepository.getOne(id);
         ExerciseEntity exerciseEntity = exerciseRepository.getOne(eId);
-        if(exerciseSetEntity.getExercises().contains(exerciseEntity)){
-            return  new ResponseEntity<>(exerciseEntity,HttpStatus.CONFLICT);
+        for (ExerciseEntity setEntity: exerciseSetEntity.getExercises()
+             ) {
+           if(setEntity.getId().equals(id))
+               return new ResponseEntity<>(HttpStatus.CONFLICT);
         }
         exerciseSetEntity.getExercises().add(exerciseEntity);
         exerciseSetRepository.save(exerciseSetEntity);

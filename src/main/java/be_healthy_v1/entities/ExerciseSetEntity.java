@@ -26,6 +26,8 @@ public class ExerciseSetEntity {
 
     public ExerciseSetEntity(String title) {
         this.title = title;
+        exercises = new ArrayList<>();
+        exerciseSetLogs = new ArrayList<>();
     }
 
     protected ExerciseSetEntity() {

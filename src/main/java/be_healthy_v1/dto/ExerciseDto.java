@@ -26,6 +26,11 @@ public class ExerciseDto {
         this.exerciseSets = exerciseSets;
     }
 
+    public ExerciseDto(String title, String description) {
+        this.title = title;
+        this.description = description;
+    }
+
     public Long getId() {
         return id;
     }

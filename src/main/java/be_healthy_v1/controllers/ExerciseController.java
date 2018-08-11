@@ -125,12 +125,13 @@ public class ExerciseController {
         }
         ExerciseEntity exerciseEntity = exerciseRepository.getOne(id);
         ExerciseSetEntity exerciseSetEntity = exerciseSetRepository.getOne(esId);
-        if(exerciseEntity.getExerciseSets().contains(exerciseEntity)){
-            return new ResponseEntity<>(exerciseEntity, HttpStatus.CONFLICT);
+        for (ExerciseEntity setEntity :exerciseSetEntity.getExercises()
+             ) {
+            if(setEntity.getId().equals(id)){
+                return new ResponseEntity<>(HttpStatus.CONFLICT);
+            }
         }
-        else{
-            exerciseSetEntity.getExercises().add(exerciseEntity);
-        }
+        exerciseSetEntity.getExercises().add(exerciseEntity);
         exerciseSetRepository.save(exerciseSetEntity);
         return new ResponseEntity(exerciseSetEntity,HttpStatus.OK);
     }
@@ -141,8 +142,8 @@ public class ExerciseController {
        if(id == null){
            return new ResponseEntity<>("Id is not found.",HttpStatus.NOT_FOUND);
        }
-       if(!exerciseSetRepository.existsById(id)){
-           return new ResponseEntity<>("Exercise is not found.", HttpStatus.BAD_REQUEST);
+       if(!exerciseRepository.existsById(id)){
+           return new ResponseEntity<>("Exercise is not found.", HttpStatus.NOT_FOUND);
        }
        ExerciseEntity exerciseEntity = exerciseRepository.getOne(id);
        for(ExerciseSetEntity exerciseSetEntity: exerciseEntity.getExerciseSets()){

@@ -2,12 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40c98b0f-afb0-4b22-8f36-851afb6d13cb" name="Default Changelist" comment="&quot;Update repository test&quot;">
-      <change afterPath="$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/ExerciseControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/ExerciseSetLogControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/ExericiseSetControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/TestUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseSetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseSetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be_healthy_v1/dto/ExerciseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be_healthy_v1/dto/ExerciseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be_healthy_v1/entities/ExerciseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be_healthy_v1/entities/ExerciseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be_healthy_v1/entities/ExerciseSetEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be_healthy_v1/entities/ExerciseSetEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/ExerciseControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/ExerciseControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/ExerciseSetLogControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/ExerciseSetLogControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/be_healthy_v1/controllers/ExerciseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be_healthy_v1/controllers/ExerciseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/be_healthy_v1/controllers/ExerciseSetController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be_healthy_v1/controllers/ExerciseSetController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/be_healthy_v1/dto/ExerciseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be_healthy_v1/dto/ExerciseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/be_healthy_v1/entities/ExerciseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be_healthy_v1/entities/ExerciseEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/be_healthy_v1/entities/ExerciseSetEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be_healthy_v1/entities/ExerciseSetEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/be_healthy_v1/repositories/ExerciseRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/be_healthy_v1/repositories/ExerciseRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/be_healthy_v1/repositories/ExerciseSetLogRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/be_healthy_v1/repositories/ExerciseSetLogRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/be_healthy_v1/repositories/ExerciseSetRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/be_healthy_v1/repositories/ExerciseSetRepositoryTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,50 +29,89 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="be_healthy" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="be_healthy" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="be_healthy" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="be_healthy: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="be_healthy" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="be_healthy: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="e_es: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-707406603">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="2" />
-          <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="26" />
-          <entry key="java" value="12581" />
-          <entry key="properties" value="76" />
-          <entry key="txt" value="26" />
+          <entry key="java" value="13456" />
+          <entry key="properties" value="90" />
+          <entry key="txt" value="36" />
           <entry key="xml" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12581" />
-          <entry key="PLAIN_TEXT" value="52" />
-          <entry key="Properties" value="76" />
+          <entry key="JAVA" value="13456" />
+          <entry key="PLAIN_TEXT" value="62" />
+          <entry key="Properties" value="90" />
           <entry key="XML" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="45" />
+          <entry key="java" value="53" />
           <entry key="properties" value="6" />
+          <entry key="sql" value="1" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="45" />
+          <entry key="JAVA" value="53" />
           <entry key="Properties" value="6" />
+          <entry key="Scratch" value="1" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
@@ -72,64 +123,94 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseSetLogRepositoryTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseSetRepositoryTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/ExerciseControllerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/ExericiseSetControllerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/ExerciseSetLogControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="58" column="54" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
+            <state relative-caret-position="211">
+              <caret line="28" column="21" lean-forward="true" selection-start-line="26" selection-end-line="28" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseSetLogController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="99" selection-start-line="99" selection-end-line="99" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/TestUtils.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/ExerciseControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+            <state relative-caret-position="440">
+              <caret line="112" selection-start-line="112" selection-end-line="112" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/entities/ExerciseEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-323">
+              <caret line="32" column="41" lean-forward="true" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/entities/ExerciseSetLogEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="149" column="67" lean-forward="true" selection-start-line="149" selection-start-column="67" selection-end-line="149" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseSetController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="789">
+              <caret line="89" column="64" selection-start-line="89" selection-start-column="64" selection-end-line="89" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/entities/ExerciseSetEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-34">
+              <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/dto/ExerciseDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -137,41 +218,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/respotories/ExerciseSetRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="5" column="84" selection-start-line="5" selection-start-column="84" selection-end-line="5" selection-end-column="84" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/respotories/ExerciseSetLogRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -218,23 +266,24 @@
         <option value="$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseSetPerformanceController.java" />
         <option value="$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseSetLoggingController.java" />
         <option value="$PROJECT_DIR$/src/main/java/be_healthy_v1/respotories/ExerciseSetLogRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be_healthy_v1/dto/ExerciseDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be_healthy_v1/entities/ExerciseEntity.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/be_healthy_v1/dto/ExerciseSetLogDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/be_healthy_v1/dto/ExerciseSetDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/be_healthy_v1/entities/ExerciseSetLogEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be_healthy_v1/entities/ExerciseSetEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseController.java" />
         <option value="$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseSetLogController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseSetController.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseSetLogRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseSetRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/ExerciseSetLogControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/TestUtils.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/be_healthy_v1/dto/ExerciseDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be_healthy_v1/entities/ExerciseSetEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseSetController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be_healthy_v1/entities/ExerciseEntity.java" />
+        <option value="$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/ExerciseSetLogControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/ExerciseControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseController.java" />
       </list>
     </option>
   </component>
@@ -251,9 +300,20 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="be_healthy_v1" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="1091" />
+    <option name="width" value="1751" />
     <option name="height" value="1087" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -262,6 +322,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -303,6 +366,24 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="be_healthy_v1" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="be_healthy_v1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="be_healthy_v1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="be_healthy_v1" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="be_healthy_v1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="be_healthy_v1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="be_healthy_v1" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="be_healthy_v1" type="b2602c69:ProjectViewProjectNode" />
@@ -363,19 +444,17 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533888931183" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533962110287" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -397,53 +476,93 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ExerciseSetLogRepositoryTest">
+  <component name="RunManager" selected="JUnit.ExerciseControllerTest.deleteNotFound">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExerciseRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExerciseControllerTest.addExerciseNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="be_healthy_v1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="be_healthy_v1.repositories.*" />
+          <option name="PATTERN" value="be_healthy_v1.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="be_healthy_v1.repositories" />
-      <option name="MAIN_CLASS_NAME" value="be_healthy_v1.repositories.ExerciseRepositoryTest" />
+      <option name="PACKAGE_NAME" value="be_healthy_v1.controllers" />
+      <option name="MAIN_CLASS_NAME" value="be_healthy_v1.controllers.ExerciseControllerTest" />
+      <option name="METHOD_NAME" value="addExerciseNotFound" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExerciseSetLogRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExerciseControllerTest.addExerciseNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="be_healthy_v1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="be_healthy_v1.repositories.*" />
+          <option name="PATTERN" value="be_healthy_v1.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="be_healthy_v1.repositories" />
-      <option name="MAIN_CLASS_NAME" value="be_healthy_v1.repositories.ExerciseSetLogRepositoryTest" />
+      <option name="PACKAGE_NAME" value="be_healthy_v1.controllers" />
+      <option name="MAIN_CLASS_NAME" value="be_healthy_v1.controllers.ExerciseControllerTest" />
+      <option name="METHOD_NAME" value="addExerciseNull" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExerciseSetRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExerciseControllerTest.addExerciseSetConflict" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="be_healthy_v1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="be_healthy_v1.repositories.*" />
+          <option name="PATTERN" value="be_healthy_v1.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="be_healthy_v1.repositories" />
-      <option name="MAIN_CLASS_NAME" value="be_healthy_v1.repositories.ExerciseSetRepositoryTest" />
+      <option name="PACKAGE_NAME" value="be_healthy_v1.controllers" />
+      <option name="MAIN_CLASS_NAME" value="be_healthy_v1.controllers.ExerciseControllerTest" />
+      <option name="METHOD_NAME" value="addExerciseSetConflict" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExerciseControllerTest.deleteExerciseOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_healthy_v1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be_healthy_v1.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be_healthy_v1.controllers" />
+      <option name="MAIN_CLASS_NAME" value="be_healthy_v1.controllers.ExerciseControllerTest" />
+      <option name="METHOD_NAME" value="deleteExerciseOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExerciseControllerTest.deleteNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="be_healthy_v1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be_healthy_v1.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be_healthy_v1.controllers" />
+      <option name="MAIN_CLASS_NAME" value="be_healthy_v1.controllers.ExerciseControllerTest" />
+      <option name="METHOD_NAME" value="deleteNotFound" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -451,19 +570,6 @@
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="be_healthy_v1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="be_healthy_v1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="be_healthy_v1.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -477,17 +583,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.Application" />
-      <item itemvalue="JUnit.ExerciseSetRepositoryTest" />
-      <item itemvalue="JUnit.ExerciseRepositoryTest" />
-      <item itemvalue="JUnit.ExerciseSetLogRepositoryTest" />
+      <item itemvalue="JUnit.ExerciseControllerTest.addExerciseNull" />
+      <item itemvalue="JUnit.ExerciseControllerTest.addExerciseSetConflict" />
+      <item itemvalue="JUnit.ExerciseControllerTest.addExerciseNotFound" />
+      <item itemvalue="JUnit.ExerciseControllerTest.deleteExerciseOk" />
+      <item itemvalue="JUnit.ExerciseControllerTest.deleteNotFound" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ExerciseSetLogRepositoryTest" />
-        <item itemvalue="JUnit.ExerciseRepositoryTest" />
-        <item itemvalue="JUnit.ExerciseSetRepositoryTest" />
-        <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="JUnit.ExerciseControllerTest.deleteNotFound" />
+        <item itemvalue="JUnit.ExerciseControllerTest.deleteExerciseOk" />
+        <item itemvalue="JUnit.ExerciseControllerTest.addExerciseNotFound" />
+        <item itemvalue="JUnit.ExerciseControllerTest.addExerciseSetConflict" />
+        <item itemvalue="JUnit.ExerciseControllerTest.addExerciseNull" />
       </list>
     </recent_temporary>
   </component>
@@ -512,7 +620,8 @@
       <workItem from="1533627547265" duration="2074000" />
       <workItem from="1533733082560" duration="4414000" />
       <workItem from="1533799600007" duration="3281000" />
-      <workItem from="1533886945145" duration="1985000" />
+      <workItem from="1533886945145" duration="2711000" />
+      <workItem from="1533954726211" duration="7436000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Update repository test&quot;">
       <created>1533802765644</created>
@@ -546,45 +655,44 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ExerciseSetRepositoryTest - 2018.08.09 at 15h 00m 47s.xml">
-      <configuration name="ExerciseSetRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ExerciseSetLogControllerTest_deleteExerciseOk - 2018.08.11 at 11h 28m 32s.xml">
+      <configuration name="ExerciseSetLogControllerTest.deleteExerciseOk" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExerciseSetRepositoryTest - 2018.08.09 at 15h 02m 14s.xml">
-      <configuration name="ExerciseSetRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ExerciseSetLogControllerTest_deleteNotFound - 2018.08.11 at 11h 28m 45s.xml">
+      <configuration name="ExerciseSetLogControllerTest.deleteNotFound" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExerciseSetRepositoryTest - 2018.08.09 at 15h 04m 46s.xml">
-      <configuration name="ExerciseSetRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ExerciseControllerTest_addExerciseCreate - 2018.08.11 at 11h 30m 19s.xml">
+      <configuration name="ExerciseControllerTest.addExerciseCreate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExerciseSetRepositoryTest - 2018.08.09 at 15h 05m 25s.xml">
-      <configuration name="ExerciseSetRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ExerciseControllerTest_addExerciseCreate - 2018.08.11 at 11h 31m 02s.xml">
+      <configuration name="ExerciseControllerTest.addExerciseCreate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExerciseSetRepositoryTest - 2018.08.09 at 15h 06m 13s.xml">
-      <configuration name="ExerciseSetRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ExerciseControllerTest_addExerciseNull - 2018.08.11 at 11h 31m 31s.xml">
+      <configuration name="ExerciseControllerTest.addExerciseNull" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExerciseSetRepositoryTest - 2018.08.09 at 15h 06m 40s.xml">
-      <configuration name="ExerciseSetRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ExerciseControllerTest_addExerciseSetConflict - 2018.08.11 at 11h 31m 42s.xml">
+      <configuration name="ExerciseControllerTest.addExerciseSetConflict" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExerciseSetRepositoryTest - 2018.08.09 at 15h 07m 18s.xml">
-      <configuration name="ExerciseSetRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ExerciseControllerTest_addExerciseNotFound - 2018.08.11 at 11h 31m 52s.xml">
+      <configuration name="ExerciseControllerTest.addExerciseNotFound" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExerciseRepositoryTest - 2018.08.09 at 15h 11m 14s.xml">
-      <configuration name="ExerciseRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ExerciseControllerTest_deleteExerciseOk - 2018.08.11 at 11h 32m 01s.xml">
+      <configuration name="ExerciseControllerTest.deleteExerciseOk" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExerciseSetLogRepositoryTest - 2018.08.09 at 15h 16m 06s.xml">
-      <configuration name="ExerciseSetLogRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ExerciseControllerTest_deleteNotFound - 2018.08.11 at 11h 32m 11s.xml">
+      <configuration name="ExerciseControllerTest.deleteNotFound" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExerciseSetLogRepositoryTest - 2018.08.09 at 15h 16m 34s.xml">
-      <configuration name="ExerciseSetLogRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ExerciseControllerTest_deleteNotFound - 2018.08.11 at 11h 34m 20s.xml">
+      <configuration name="ExerciseControllerTest.deleteNotFound" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69854000" />
+    <option name="totallyTimeSpent" value="78016000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1091" height="1087" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="1751" height="1087" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49881235" visible="true" weight="0.31231815" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49881235" visible="true" weight="0.19396807" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -596,25 +704,25 @@
       <window_info anchor="bottom" id="Spring" order="0" weight="0.32952183" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.5099685" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.5141658" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4989339" weight="0.31269675" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4989339" visible="true" weight="0.3095488" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5010661" side_tool="true" weight="0.3095488" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32948583" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49919093" weight="0.32528856" />
-      <window_info anchor="right" id="Bean Validation" order="0" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49919093" weight="0.32423925" />
+      <window_info anchor="right" id="Bean Validation" order="0" weight="0.32995737" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="6" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="7" weight="0.32995737" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
@@ -628,6 +736,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Update repository test&quot;" />
     <option name="LAST_COMMIT_MESSAGE" value="&quot;Update repository test&quot;" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/dto/BaseDto.java" />
@@ -647,20 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/entities/ExerciseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/dto/ExerciseDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/dto/ExerciseSetDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -675,51 +773,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseSetLogController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="99" selection-start-line="99" selection-end-line="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/entities/ExerciseSetEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/entities/ExerciseSetLogEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="129" column="9" selection-start-line="127" selection-start-column="8" selection-end-line="129" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseSetController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -743,6 +800,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseSetRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/ExericiseSetControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/TestUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/respotories/ExerciseSetRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -763,10 +851,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/repositories/ExerciseSetRepositoryTest.java">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/eaf42af1-4296-436c-9661-e47199898b67/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        <state relative-caret-position="17">
+          <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/dto/ExerciseDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/entities/ExerciseSetLogEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/entities/ExerciseSetEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/entities/ExerciseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-323">
+          <caret line="32" column="41" lean-forward="true" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseSetController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="789">
+          <caret line="89" column="64" selection-start-line="89" selection-start-column="64" selection-end-line="89" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseSetLogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="99" selection-start-line="99" selection-end-line="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/ExerciseSetLogControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="28" column="21" lean-forward="true" selection-start-line="26" selection-end-line="28" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be_healthy_v1/controllers/ExerciseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="149" column="67" lean-forward="true" selection-start-line="149" selection-start-column="67" selection-end-line="149" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -775,46 +928,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/ExerciseControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/ExericiseSetControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/ExerciseSetLogControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="58" column="54" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
+        <state relative-caret-position="440">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/be_healthy_v1/controllers/TestUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
         </state>
       </provider>
     </entry>
